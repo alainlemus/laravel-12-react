@@ -9,7 +9,17 @@ const breadcrumbs: BreadcrumbItem[] = [
     },
 ];
 
-export default function Users({ users }) {
+interface User {
+    id: number;
+    name: string;
+    email: string;
+}
+
+interface UsersProps {
+    users: User[];
+}
+
+export default function Users({ users }: UsersProps) {
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Users" />
