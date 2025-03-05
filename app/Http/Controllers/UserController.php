@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Users',[
+        return Inertia::render('users',[
             'users' => User::all(),
         ]);
     }
